@@ -1,9 +1,10 @@
-import AcmeLogo from "@/app/ui/acme-logo";
-import styles from "./ui/home.module.css";
+import AcmeLogo from '@/app/ui/acme-logo';
+import styles from './ui/home.module.css';
 
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
-import { lusitana } from "./ui/fonts";
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
+import { lusitana } from './ui/fonts';
+import Image from 'next/image';
 
 //---------------------------------------------------------------------------------------
 
@@ -19,7 +20,7 @@ export default function Page() {
           <p
             className={` ${lusitana.className}text-xl text-gray-800 md:text-3xl md:leading-normal`}
           >
-            <strong>Bienvenidos a Next.JS.</strong> This is the example for the{" "}
+            <strong>Bienvenidos a Next.JS.</strong> This is the example for the{' '}
             <a href="https://nextjs.org/learn/" className="text-blue-500">
               Next.js Learn Course
             </a>
@@ -33,7 +34,22 @@ export default function Page() {
           </Link>
         </div>
         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
-          {/* Add Hero Images Here */}
+          {/* Add Hero Images Here
+          <img src="/hero-desktop.png" alt="Screenshots of the dashboard" />*/}
+          <Image
+            src="/hero-desktop.png"
+            alt="Screenshots of the dashboard"
+            width={1000}
+            height={760}
+            className="hidden md:block"
+          />
+          <Image
+            src="/hero-mobile.png"
+            alt="Screenshots of the mobile"
+            width={1000}
+            height={760}
+            className="block md:hidden"
+          />
         </div>
       </div>
     </main>
